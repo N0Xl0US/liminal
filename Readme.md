@@ -48,7 +48,7 @@ liminal/
 1. Clone the repo:
 
    ```sh
-   git clone https://github.com/your-username/liminal.git
+   git clone https://github.com/N0Xl0US/liminal.git
    cd liminal
    ```
 
