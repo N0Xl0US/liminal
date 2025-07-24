@@ -1,4 +1,23 @@
-# 🕵️‍♂️ LIMINAL
+  ```
+                                                                                                           
+                                                                                                           
+                                                          L.                                                
+             i      t                              t      EW:        ,ft                                i   
+            LE      Ej               ..       :    Ej     E##;       t#E               ..              LE   
+           L#E      E#,             ,W,     .Et    E#,    E###t      t#E              ;W,             L#E   
+          G#W.      E#t            t##,    ,W#t    E#t    E#fE#f     t#E             j##,            G#W.   
+         D#K.       E#t           L###,   j###t    E#t    E#t D#G    t#E            G###,           D#K.    
+        E#K.        E#t         .E#j##,  G#fE#t    E#t    E#t  f#E.  t#E          :E####,          E#K.     
+      .E#E.         E#t        ;WW; ##,:K#i E#t    E#t    E#t   t#K: t#E         ;W#DG##,        .E#E.      
+     .K#E           E#t       j#E.  ##f#W,  E#t    E#t    E#t    ;#W,t#E        j###DW##,       .K#E        
+    .K#D            E#t     .D#L    ###K:   E#t    E#t    E#t     :K#D#E       G##i,,G##,      .K#D         
+   .W#G             E#t    :K#t     ##D.    E#t    E#t    E#t      .E##E     :K#K:   L##,     .W#G          
+  :W##########Wt    E#t    ...      #G      ..     E#t    ..         G#E    ;##D.    L##,    :W##########Wt 
+  :,,,,,,,,,,,,,.   ,;.             j              ,;.                fE    ,,,      .,,     :,,,,,,,,,,,,,.
+                                                                                         
+
+
+   ```
 **Solve the glitch. Unmask the ripple. Escape the noise.**
 
 A terminal-based ASCII detective game set inside a decaying cyberpunk network.  
@@ -7,7 +26,7 @@ The Mask is watching.
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 liminal/
@@ -23,7 +42,7 @@ liminal/
 
 ---
 
-## 🧠 Game Concept
+## Game Concept
 
 - A mysterious entity known as **The Mask** has fragmented his presence into cryptic data traces.
 - You must recover **3 narrative clues** from global nodes — each encoded in signal noise, audio logs, and timestamp anomalies.
@@ -32,7 +51,7 @@ liminal/
 
 ---
 
-## ✨ Features
+## Features
 
 - Full **ASCII UI** with colorful terminal rendering
 - Mod-friendly architecture using external `.txt` files
@@ -41,14 +60,14 @@ liminal/
 
 ---
 
-## 🛠️ Installation
+## Installation
 
 ### 🔧 Linux / macOS
 
 1. Clone the repo:
 
    ```sh
-   git clone https://github.com/your-username/liminal.git
+   git clone https://github.com/N0Xl0US/liminal.git
    cd liminal
    ```
 
@@ -65,7 +84,7 @@ liminal/
    make clean
    ```
 
-### 🪟 Windows (MinGW / WSL)
+### Windows (MinGW / WSL)
 
 **Option 1: Using WSL (Recommended)**
 
@@ -87,7 +106,7 @@ liminal/
 
 ---
 
-## 🎮 How to Play
+## How to Play
 
 - Launch the game from your terminal after building.
 - Follow the on-screen prompts and narrative.
@@ -98,14 +117,14 @@ liminal/
 
 ---
 
-## 🧰 Requirements
+## Requirements
 
 - `g++` with C++17 support
 - Terminal that supports ANSI escape codes (almost all modern terminals)
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.  
 Feel free to use, modify, and share — just credit the original author.
