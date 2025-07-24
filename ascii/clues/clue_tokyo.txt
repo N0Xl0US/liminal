@@ -1,0 +1,17 @@
+> TRACE_01 // NODE: 35N 139E // Tokyo Subnet
+
+[Log Fragment 9F2C-A]
+> Recovered from intercepted comms within the Megastructure's public Wi-Fi core.
+
+They say the mask first appeared during a midnight typhoon.
+The street cams all blinked off for exactly 133 seconds.
+
+  “I told you,” she whispered.  
+   “He's not a man. He's a ripple.”
+
+>> Embedded Metadata:
+   poem.ts[0x1F]: // look between the lines
+   00:45:13 | 00:47:26 | 00:49:39
+   ↑ What do you see?
+
+[MESSAGE ENDS]

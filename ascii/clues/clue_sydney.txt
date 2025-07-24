@@ -1,0 +1,14 @@
+> TRACE_03 // NODE: 33S 151E // Harbor Data Spine
+
+[Extracted From: Deep Ocean Fiber Tap // classified]
+
+:: Audio pulse registered every 19 minutes, 17 seconds
+:: Source unknown – not naval, not seismic
+
+“Only the children could hear it.
+  They drew his face in chalk on sea walls.”
+
+Ping pattern encodes coordinates, maybe.
+But the cable isn’t transmitting data — it’s listening.
+
+>> SIG_ID: “M.A.S.K-01”
