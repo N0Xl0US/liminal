@@ -8,7 +8,17 @@ namespace Engine {
 
     void run() {
         Game::showTitle();
+        std::cout << "\nPress Enter to continue...";
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        Game::clearScreen();
         Game::startIntro();
+        std::cout << "\nPress Enter to continue...";
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        Game::clearScreen();
+        Ascii::display("ascii/world_map.txt");
+        std::cout << "\nPress Enter to continue...";
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        Game::clearScreen();
         Game::playClues();
         Game::enterFinalPassword();
         // Game::gameOver(); // No longer needed, handled in enterFinalPassword
