@@ -1,5 +1,6 @@
 #include "../include/engine.hpp"
 #include "../include/game.hpp"
+#include <limits>
 
 namespace Engine {
     void init() {
@@ -12,12 +13,6 @@ namespace Engine {
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         Game::clearScreen();
         Game::startIntro();
-        std::cout << "\nPress Enter to continue...";
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        Game::clearScreen();
-        Ascii::display("ascii/world_map.txt");
-        std::cout << "\nPress Enter to continue...";
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         Game::clearScreen();
         Game::playClues();
         Game::enterFinalPassword();

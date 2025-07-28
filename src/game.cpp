@@ -7,13 +7,17 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <limits>
 
 namespace Game {
     static std::vector<NotebookEntry> notebook;
 
     void clearScreen() {
-        // ANSI escape code to clear screen
-        std::cout << "\033[2J\033[1;1H";
+        #ifdef _WIN32
+            system("cls");
+        #else
+            std::cout << "\033[2J\033[1;1H";
+        #endif
     }
 
     void addToNotebook(const std::string& clueName, const std::string& clueText, const std::string& solution) {
@@ -42,7 +46,9 @@ namespace Game {
     }
 
     void startIntro() {
-        Ascii::displayWithDelay("ascii/intro.txt", 80); // Will slow further in next step
+        Ascii::displayWithDelay("ascii/intro.txt", 80);
+        std::cout << "\nPress Enter to begin trace...";
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         clearScreen();
     }
 
@@ -119,8 +125,12 @@ namespace Game {
     void gameOver(bool win) {
         if (win) {
             Ascii::display("ascii/gameover_alt.txt");
+            std::cout << "\nPress Enter to return to Nexus...";
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         } else {
             Ascii::display("ascii/gameover.txt");
+            std::cout << "\nPress Enter to exit...";
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         }
     }
 }
