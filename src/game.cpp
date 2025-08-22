@@ -8,7 +8,6 @@
 #include <vector>
 #include <algorithm>
 #include <limits>
-#include <random>
 
 namespace Game {
     static std::vector<NotebookEntry> notebook;
@@ -94,10 +93,19 @@ namespace Game {
             solutions.push_back(clue.solution);
         }
         
-        // Jumble the solutions by shuffling them
-        std::random_device rd;
-        std::mt19937 g(rd());
-        std::shuffle(solutions.begin(), solutions.end(), g);
+        // Jumble the solutions using a deterministic pattern
+        // Pattern: rotate right by 1 position, then swap middle with last
+        if (solutions.size() >= 3) {
+            // Original: [133, 2131456, 1917]
+            
+            // Step 1: Rotate right by 1: [133, 2131456, 1917] -> [1917, 133, 2131456]
+            std::rotate(solutions.rbegin(), solutions.rbegin() + 1, solutions.rend());
+            
+            // Step 2: Swap middle with last: [1917, 133, 2131456] -> [1917, 2131456, 133]
+            std::swap(solutions[1], solutions[2]);
+            
+            // Final result: 19172131456133 (different from original 13321314561917)
+        }
         
         // Concatenate the jumbled solutions
         std::string masterPassword;
@@ -112,7 +120,9 @@ namespace Game {
         int tries = 0;
         const int maxTries = 3;
         while (tries < maxTries) {
-            std::cout << TermColor::YELLOW << "All clues decrypted. Enter master password (type 'notebook' to view clues):\n> " << TermColor::RESET;
+            std::cout << TermColor::YELLOW << "All clues decrypted. Enter master password (type 'notebook' to view clues):\n" << TermColor::RESET;
+            std::cout << TermColor::CYAN << "Hint: The order spins like a wheel, then dances with its neighbors\n" << TermColor::RESET;
+            std::cout << TermColor::YELLOW << "> " << TermColor::RESET;
             std::string pw;
             std::getline(std::cin, pw);
             if (pw == "notebook") {
