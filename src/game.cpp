@@ -49,7 +49,7 @@ namespace Game {
     void startIntro() {
         Ascii::displayWithDelay("ascii/intro.txt", 80);
         std::cout << "\nPress Enter to begin trace...";
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cin.get();
         clearScreen();
     }
 
@@ -138,11 +138,11 @@ namespace Game {
         if (win) {
             Ascii::display("ascii/gameover_alt.txt");
             std::cout << "\nPress Enter to return to Nexus...";
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cin.get();
         } else {
             Ascii::display("ascii/gameover.txt");
             std::cout << "\nPress Enter to exit...";
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cin.get();
         }
     }
 }

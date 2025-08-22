@@ -10,7 +10,7 @@ namespace Engine {
     void run() {
         Game::showTitle();
         std::cout << "\nPress Enter to continue...";
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cin.get();
         Game::clearScreen();
         Game::startIntro();
         Game::clearScreen();
