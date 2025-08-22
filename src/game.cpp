@@ -1,8 +1,8 @@
 #include "../include/game.hpp"
 #include "../include/ascii.hpp"
 #include "../include/clue.hpp"
-#include "../include/terminal_colors.hpp"
-#include "../include/file_utils.hpp"
+#include "../include/terminalcolors.hpp"
+#include "../include/fileutils.hpp"
 
 #include <iostream>
 #include <vector>

@@ -1,4 +1,4 @@
-#include "../include/terminal_colors.hpp"
+#include "../include/terminalcolors.hpp"
 
 namespace TermColor {
     std::string colorize(const std::string& text, const std::string& color) {

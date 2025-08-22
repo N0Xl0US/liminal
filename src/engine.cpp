@@ -4,7 +4,6 @@
 
 namespace Engine {
     void init() {
-        // Set up environment, preload data
     }
 
     void run() {
@@ -16,10 +15,11 @@ namespace Engine {
         Game::clearScreen();
         Game::playClues();
         Game::enterFinalPassword();
-        // Game::gameOver(); // No longer needed, handled in enterFinalPassword
+
     }
 
     void shutdown() {
         // Clean up if needed
+        Game::clearScreen();
     }
 }
