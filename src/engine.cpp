@@ -1,5 +1,6 @@
 #include "../include/engine.hpp"
 #include "../include/game.hpp"
+#include <iostream>
 #include <limits>
 
 namespace Engine {
