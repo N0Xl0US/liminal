@@ -71,7 +71,6 @@ namespace Game {
                     std::cout << TermColor::GREEN << "✓ Clue Solved!\n\n" << TermColor::RESET;
                     clue.solved = true;
                     solved = true;
-                    // Read clue text for notebook
                     std::string clueText = FileUtils::readFile(clue.file);
                     addToNotebook(clue.name, clueText, clue.solution);
                 } else {
@@ -83,7 +82,6 @@ namespace Game {
 
     void enterFinalPassword() {
         const auto& clues = Clue::getClues();
-        // Check if all clues are solved
         bool allSolved = true;
         std::vector<std::string> solutions;
         for (const auto& clue : clues) {
@@ -93,21 +91,13 @@ namespace Game {
             solutions.push_back(clue.solution);
         }
         
-        // Jumble the solutions using a deterministic pattern
-        // Pattern: rotate right by 1 position, then swap middle with last
         if (solutions.size() >= 3) {
-            // Original: [133, 2131456, 1917]
-            
-            // Step 1: Rotate right by 1: [133, 2131456, 1917] -> [1917, 133, 2131456]
             std::rotate(solutions.rbegin(), solutions.rbegin() + 1, solutions.rend());
             
-            // Step 2: Swap middle with last: [1917, 133, 2131456] -> [1917, 2131456, 133]
             std::swap(solutions[1], solutions[2]);
             
-            // Final result: 19172131456133 (different from original 13321314561917)
         }
         
-        // Concatenate the jumbled solutions
         std::string masterPassword;
         for (const auto& solution : solutions) {
             masterPassword += solution;
@@ -147,7 +137,7 @@ namespace Game {
     void gameOver(bool win) {
         if (win) {
             Ascii::display("ascii/gameover_alt.txt");
-            std::cout << "\nPress Enter to return to Nexus...";
+            std::cout << "\nPress Enter to exit...";
             std::cin.get();
         } else {
             Ascii::display("ascii/gameover.txt");

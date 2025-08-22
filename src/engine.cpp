@@ -20,7 +20,6 @@ namespace Engine {
     }
 
     void shutdown() {
-        // Clean up if needed
         Game::clearScreen();
     }
 }
