@@ -17,5 +17,5 @@
 ║                                 The ghost in the wires is silent.                              ║
 ║                                 Truth always floats to the top.                                ║
 ║                                                                                                ║
-║                                 Press [Enter] to return to Nexus.                              ║
+║                                                                                                ║
 ╚════════════════════════════════════════════════════════════════════════════════════════════════╝

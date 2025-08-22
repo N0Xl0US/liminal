@@ -8,6 +8,7 @@
 #include <vector>
 #include <algorithm>
 #include <limits>
+#include <random>
 
 namespace Game {
     static std::vector<NotebookEntry> notebook;
@@ -85,12 +86,23 @@ namespace Game {
         const auto& clues = Clue::getClues();
         // Check if all clues are solved
         bool allSolved = true;
-        std::string masterPassword;
+        std::vector<std::string> solutions;
         for (const auto& clue : clues) {
             if (!clue.solved) {
                 allSolved = false;
             }
-            masterPassword += clue.solution;
+            solutions.push_back(clue.solution);
+        }
+        
+        // Jumble the solutions by shuffling them
+        std::random_device rd;
+        std::mt19937 g(rd());
+        std::shuffle(solutions.begin(), solutions.end(), g);
+        
+        // Concatenate the jumbled solutions
+        std::string masterPassword;
+        for (const auto& solution : solutions) {
+            masterPassword += solution;
         }
         if (!allSolved) {
             std::cout << TermColor::RED << "\nYou must solve all clues before attempting the final password.\n" << TermColor::RESET;
